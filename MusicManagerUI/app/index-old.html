@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lazy Loading {{'app.title'| i18next}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/searchBar.css">
+  <link rel="stylesheet" href="styles/sidenav.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/font-css.css">
+  <link rel="stylesheet" href="components/breadcrumbs/ovBreadcrumbs.css">
+  <link rel="stylesheet" href="components/table-view/ovTableViewTest.css">
+
+  <!--<script data-main="main" src="bower_components/requirejs/require.js"></script>-->
+
+  <!--lib-->
+  <script src="bower_components/lodash/index.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/i18next/i18next.min.js"></script>
+  <script src="bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script>
+  <script src="bower_components/ng-i18next/dist/ng-i18next.min.js"></script>
+  <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+  <!--<script src="scripts/core/routeResolver.js"></script>-->
+  <!--/-->
+
+</head>
+<body>
+
+<!-- Main Div -->
+<div id="main-container" class="main-container container-fluid container"
+     ng-controller="AppCtrl as vm">
+
+  <!-- header -->
+  <div id="header" class="header row">
+    <div id="header-wrap">
+      <!-- Sidebar -->
+      <span class="menubtn" onclick="openNav()">&#9776;</span>
+      <span id="music-icon" ng-click="vm.changeRoute('songs')" class="glyphicon glyphicon-headphones"></span>
+      <a ng-click="vm.changeRoute('songs')">
+        {{'app.title'| i18next}}
+      </a>
+    </div>
+    <div class="flag">
+      <a ng-click="vm.changeLang('en')">
+        <img src="images/flag/flag-32.ico">
+        <span ng-class="{blackcolor: vm.isEnLanguge()}">en</span>
+      </a> |
+      <a ng-click="vm.changeLang('vi')">
+        <img src="images/flag/vietnam-32.ico">
+        <span ng-class="{blackcolor: !vm.isEnLanguge()}">vi</span>
+      </a>
+    </div>
+
+  </div><!--end #header-->
+
+  <div id="main-content" class="main-content row content">
+    <div id="mySidenav" class="sidenavrp">
+      <a class="closebtn " onclick="closeNav()">&times;</a>
+      <a ng-click="vm.changeRoute('songs')"
+         ng-class="{'active-menu':vm.isSongMenu()}">{{'app.common.song'| i18next}}</a>
+      <a ng-click="vm.changeRoute('playlists')"
+         ng-class="{'active-menu':vm.isPlaylistMenu()}">{{'app.common.playlists'| i18next}}</a>
+    </div>
+
+    <!-- Left-->
+    <div class="btn-group-vertical col-sm-3 sidenav" id="left-div">
+      <button type="button" class="btn btn-default" ng-click="vm.changeRoute('songs')"
+              ng-class="{'active-menu':vm.isSongMenu()}">{{'app.common.song'| i18next}}
+      </button>
+      <button type="button" class="btn btn-default" ng-click="vm.changeRoute('playlists')"
+              ng-class="{'active-menu':vm.isPlaylistMenu()}">{{'app.common.playlists'| i18next}}
+      </button>
+    </div>
+
+    <!-- Center -->
+    <div id="center-container" class="col-sm-9 text-left" style="padding: 0px; border-left: 1px #ccc solid">
+      <!-- Manager Song -->
+      <div ng-view=""></div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer" class="row">
+    <p>Copyright 2017,TMA Solutions</p>
+  </div><!--end #footer-->
+
+</div><!-- end Main Div-->
+
+<script>
+
+  function openNav() {
+    document.getElementById("mySidenav").style.display = "block";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.display = "none";
+  }
+
+  /* Search Bar */
+  function displaySearchBar() {
+
+    var searchBar = document.getElementsByClassName("search-bar")[0];
+    searchBar.style.display = "inline-flex";
+    document.getElementById("cs-group-button").style.display = "none";
+  }
+
+  function closeSearchBar() {
+    document.getElementById("cs-group-button").style.display = "inline";
+    document.getElementsByClassName("search-bar")[0].style.display = "none";
+  }
+
+</script>
+
+<script src="scripts/app.module.js"></script>
+<script src="scripts/config-route.js"></script>
+<script src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/main-app/app.service.js"></script>
+
+<!--common-->
+<script type="text/javascript" src="scripts/common/common.constant.js"></script>
+<script type="text/javascript" src="scripts/common/common.service.js"></script>
+
+<!--appService-->
+
+<!-- directive-->
+<script src="components/breadcrumbs/ovBreadcrumbs.controller.js"></script>
+<script src="components/breadcrumbs/ovBreadcrumbs.directive.js"></script>
+
+<script src="components/table-view/ovTableView.controller.js"></script>
+<script src="components/table-view/ovTableView.directive.js"></script>
+
+<script src="components/dialog/ovDialog.directive.js"></script>
+<script src="components/dialog/ovDialog.controller.js"></script>
+
+</body>
+
+</html>

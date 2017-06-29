@@ -1,0 +1,29 @@
+﻿<div ng-controller="landingController">
+
+    <h2>This application has been implemented in the following scenario using ocLazyLoad and requireJs.</h2>
+    <ul class="list-group">
+        <li class="list-group-item">
+            On the landing page, <b>, we have attached landing controllers to the main app</b>.
+            We are attaching the <b>controllers and services lazily</b>, we used <b>registerController, $register.factory</b> functionality
+            which is defined in the app.config. When the files are loaded lazily the controller and the services will be attached to the main app.
+        </li>
+        <li class="list-group-item">
+            For home controller, we have <b>used a separate module called "SampleApp.Home"</b>. Therefor after loading the file, we need to inject the module using ocLazyLoad.
+            This functionality is implemented in the <b>app.js</b> file at the routing <b>"/home"</b> (see resolve block in code).
+        </li>
+        <li class="list-group-item">
+            To load page1, we have used the module "SampleApp.Pages". Page1Service.js file has a dependency to page1Controller.js file.
+            This dependent file has to loaded before loading the page1Controller.js file.
+            <br /> 
+            We created the module "SampleApp.Pages" in Page1Service.js file, Since Page1Service.Js file is a parent in the hierarchy.
+
+        </li>
+        <li class="list-group-item">
+            We created a separate routing in "SampleApp.Pages".
+        </li>
+        <li class="list-group-item">
+            We created the controller and services under "SampleApp.Pages" for page2. This page will be loaded lazily after the first module has been loaded.
+            We therefore need to register the controllers and services for this.
+        </li>
+    </ul>
+</div>

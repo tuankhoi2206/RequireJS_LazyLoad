@@ -1,0 +1,7 @@
+{
+  "directory": "app/bower_components",  
+  "strict-ssl": "false",
+  "proxy":"http://10.10.10.10:8080",
+  "https-proxy":"http://10.10.10.10:8080"
+}
+#https://bower.io/docs/config/

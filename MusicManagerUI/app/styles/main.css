@@ -1,0 +1,273 @@
+/*-------------------------------*/
+/*           TYPOGRAPHY          */
+/*-------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  font-weight: 400;
+  background-color: rgba(0,0,0,0.02);
+  overflow: hidden;
+}
+#main-container {
+  height: calc(100% - 80px);
+}
+#main-container .main-content {
+  height: 100%;
+}
+#main-container .main-content #center-container {
+  height: 100%;
+}
+/*-------------------------------*/
+/*           HEADER              */
+/*-------------------------------*/
+#header a {
+  text-decoration: none;
+}
+#header {
+  background-color: #1a91b1;
+  color: #fff;
+  height: 80px;
+}
+#header #header-wrap {
+  padding-left: 3%;
+  float: left;
+}
+#header-wrap a {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/**** header ****/
+#header-wrap {
+  font-size: 30px;
+  height: 80px;
+  line-height: 80px;
+}
+#header a {
+  color: #f5f5f5;
+}
+#header-wrap .menubtn {
+  display: none;
+  cursor: pointer;
+  float: none;
+  border: 1px solid #ddd;
+  margin: 0px;
+  padding: 7px;
+}
+#header-wrap .menubtn .icon-bar {
+  background-color: #fff;
+}
+#header .flag {
+  float: right;
+  padding-right: 1%;
+}
+#header .flag a img {
+  height: 25px;
+  cursor: pointer;
+}
+/**
+ *=================>FOOTER<=================
+ **/
+#footer > div {
+  background-color: #1a91b1;
+  height: 80px;
+}
+#footer {
+  position: fixed;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+}
+#footer .company-info p {
+  line-height: 80px;
+  text-align: center;
+  color: #f5f5f5;
+}
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+/*for song*/
+div.hLeft {
+  float: left;
+}
+div.hRight {
+  float: right;
+  width: 100%;
+}
+.navbar {
+  min-height: 0px;
+}
+.padding-top {
+  padding-top: 9px;
+}
+.hNav {
+  padding-bottom: 9px;
+  padding-top: 9px;
+  border-bottom: 1px solid #dcdcdc;
+  display: block;
+  overflow: auto;
+}
+.container-fluid {
+  position: relative;
+}
+/**/
+/* all*/
+.my-panel {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.panel-footer {
+  text-align: right;
+}
+.my-animate {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* search bar*/
+.cs-search-bar {
+  display: none;
+}
+.cs-group-button {
+  display: inline;
+}
+.blackcolor {
+  color: #0f0f0f;
+}
+.flag a,
+.flag img {
+  cursor: pointer;
+}
+/*** BODY ***/
+.main-content {
+  padding: 0px;
+}
+.col-text-align {
+  text-align: center;
+}
+/*.btn-default:not(.nofocus):focus
+    background-color: #e6e6e6
+
+
+.btn-default:not(.noactive):active
+    background-color: #e6e6e6
+*/
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.has-error {
+  color: #b22222;
+}
+#information-panel,
+#addSong-panel {
+  border-top: 0px;
+}
+#information-panel {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.panel-body ul li div {
+  display: inline;
+}
+.panel-body ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.panel-body {
+  padding: 1%;
+}
+.div-text {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+/* Dành cho máy tính bảng chiều ngang */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #div-contenter {
+    width: 100%;
+  }
+  #left-div {
+    display: none;
+  }
+  #center-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .displayLabel {
+    display: none;
+  }
+  .main-table {
+    display: none;
+  }
+  .panel-list-mini {
+    display: block;
+  }
+}
+/* button in nav */
+@media screen and (max-width: 600px) {
+  .nav-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  #list-btn-del {
+    display: none;
+  }
+}
+/* Dành cho điện thoại */
+@media all and (max-width: 480px) {
+  #header-wrap {
+    height: 50px;
+    line-height: 50px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+/******Reponsive*********/
+@media all and (max-width: 900px) {
+  #header-wrap {
+    font-size: 25px;
+  }
+  #header-wrap .menubtn {
+    display: inline-block;
+  }
+  .breadcrumb,
+  #music-icon,
+  #left-div {
+    display: none;
+  }
+  .sidenavrp a {
+    font-size: 16px;
+  }
+}

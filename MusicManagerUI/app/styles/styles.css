@@ -1,0 +1,54 @@
+
+.btn-default:active,
+.btn-default.active {
+  color: #333;
+  background-color: whitesmoke;
+  border-color: #adadad;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  /*height: 450px*/
+  border: 1px #ccc solid;
+}
+
+#footer {
+  /* line-height: 60px;*/
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-brand:hover {
+  color: #3c3c3c;
+  background-color: yellow;
+}
+
+.navbar-custom {
+  border: none;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #2b2828;
+  background-color: transparent;
+}
+
+.navbar-custom .navbar-header > a:hover {
+  color: #2b2828;
+  background-color: transparent;
+}
+
+.navbar-custom .navbar-header > a {
+  color: #5e5e5e;
+}

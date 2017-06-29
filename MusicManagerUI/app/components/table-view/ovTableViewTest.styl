@@ -1,0 +1,124 @@
+.tableView
+  border-left 1px solid gainsboro
+  border-top 1px solid gainsboro
+  max-height 620px
+  overflow auto
+  white-space nowrap
+
+.rawTableView > div
+  border-right 1px solid gainsboro
+  border-bottom 1px solid gainsboro
+  overflow hidden
+  text-overflow ellipsis
+
+.rawTableView
+  display flex
+  background-color #F7F7F7
+
+.rawTableViewhover
+  background-color rgba(10, 33, 85, 0.04)
+  cursor pointer
+
+.rawTableViewfirst-child
+  background-color #fff
+
+/*renew*/
+
+.rawHeader div
+  font-weight bold
+
+.div-text
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+/* Col */
+.rawTableView
+  .first-col
+    width 8%
+
+.rawTableView
+  .first-col a
+    color #5C5C5C
+    font-weight bold
+    white-space nowrap
+
+.rawTableView .first-col, .last-col
+  line-height 44px
+  text-align center
+
+.rawTableView .group-col-3-4
+  flex-grow 1
+  display flex
+  width 54%
+
+.group-col-3-4 divfirst-child
+  border-right 1px solid gainsboro
+
+.col-3, .col-4
+  flex 1
+  line-height 44px
+  padding-left 8px
+
+.rawTableView .last-col
+  width 30%
+
+.last-col label
+  font-weight normal
+
+@media screen and (max-width 600px)
+  .title-button
+    display none
+
+  .rawTableView .first-col
+    width 12%
+
+  .rawTableView .group-col-3-4
+    width 58%
+
+@media screen and (max-width 480px)
+
+  .rawHeader
+    display none
+
+  .group-col-3-4
+    flex-direction column
+
+  .group-col-3-4 .col-3
+    font-weight bold
+
+  .group-col-3-4 div
+    line-height 22px
+
+  .group-col-3-4first-letter
+    font-weight bold
+    background-color gainsboro
+
+  .flex-one label
+    font-weight bold
+
+  .col-2
+    display none
+
+  .col-3
+    border-right 0px !important
+
+@media screen and (max-width 320px)
+  .btn-delele
+    display none
+
+  .rawTableView
+    font-size 13px
+    transition all 0.5s
+
+  .rawTableView > div
+    border-right 0px
+
+  .rawTableView > divlast-child
+    border-right 1px solid gainsboro
+
+  .rawTableView .group-col-3-4
+    width 63%
+
+  .rawTableView .last-col
+    width 25%
