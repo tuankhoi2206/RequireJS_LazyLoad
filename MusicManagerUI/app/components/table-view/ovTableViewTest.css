@@ -1,9 +1,9 @@
 .tableView {
-  border-left: 1px solid #dcdcdc;
-  border-top: 1px solid #dcdcdc;
-  max-height: 620px;
-  overflow: auto;
+  border: 1px solid #dcdcdc;
   white-space: nowrap;
+}
+.table-view-no-data {
+  color: #5c5c5c;
 }
 .rawTableView > div {
   border-right: 1px solid #dcdcdc;
@@ -12,17 +12,17 @@
   text-overflow: ellipsis;
 }
 .rawTableView {
-  display: flex;
+  display: -webkit-box;
   background-color: #f7f7f7;
 }
-.rawTableViewhover {
+.rawTableView:hover {
   background-color: rgba(10,33,85,0.04);
   cursor: pointer;
 }
-.rawTableViewfirst-child {
-  background-color: #fff;
-}
 /*renew*/
+.rawHeader {
+  overflow: hidden;
+}
 .rawHeader div {
   font-weight: bold;
 }
@@ -33,7 +33,10 @@
 }
 /* Col */
 .rawTableView .first-col {
-  width: 8%;
+  width: 50px;
+}
+.face-header {
+  height: 45px;
 }
 .rawTableView .first-col a {
   color: #5c5c5c;
@@ -62,24 +65,22 @@
 .rawTableView .last-col {
   width: 30%;
 }
-.last-col label {
-  font-weight: normal;
+.tableView {
+  height: 100%;
+}
+.table-view-body {
+  overflow: auto;
+  height: calc(100% - 45px);
 }
 @media screen and (max-width: 600px) {
   .title-button {
     display: none;
   }
-  .rawTableView .first-col {
-    width: 12%;
-  }
-  .rawTableView .group-col-3-4 {
-    width: 58%;
-  }
+}
+.rawTableView .group-col-3-4 {
+  width: 58%;
 }
 @media screen and (max-width: 480px) {
-  .rawHeader {
-    display: none;
-  }
   .group-col-3-4 {
     flex-direction: column;
   }
@@ -108,19 +109,15 @@
     display: none;
   }
   .rawTableView {
-    font-size: 13px;
     transition: all 0.5s;
   }
-  .rawTableView > div {
-    border-right: 0px;
-  }
-  .rawTableView > divlast-child {
-    border-right: 1px solid #dcdcdc;
-  }
-  .rawTableView .group-col-3-4 {
-    width: 63%;
-  }
-  .rawTableView .last-col {
-    width: 25%;
-  }
+}
+.rawTableView > divlast-child {
+  border-left: 1px #ccc solid;
+}
+.rawTableView .group-col-3-4 {
+  width: 63%;
+}
+.rawTableView .last-col {
+  width: 25%;
 }

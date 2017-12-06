@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <title>Title</title>
-    <style>
-        #searchbox {
-            width: 240px;
-        }
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <title>Title</title>
+  <style>
+    #searchbox {
+      width: 240px;
+    }
 
-        #searchbox input {
-            outline: none;
-        }
+    #searchbox input {
+      outline: none;
+    }
 
-        input:focus::-webkit-input-placeholder {
-            color: transparent;
-        }
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
 
-        input:focus:-moz-placeholder {
-            color: transparent;
-        }
+    input:focus:-moz-placeholder {
+      color: transparent;
+    }
 
-        input:focus::-moz-placeholder {
-            color: transparent;
-        }
+    input:focus::-moz-placeholder {
+      color: transparent;
+    }
 
-        #searchbox input[type="text"] {
-            background: url(http://2.bp.blogspot.com/-xpzxYc77ack/VDpdOE5tzMI/AAAAAAAAAeQ/TyXhIfEIUy4/s1600/search-dark.png) no-repeat 10px 13px #f2f2f2;
-            border: 2px solid #f2f2f2;
-            font: bold 12px Arial, Helvetica, Sans-serif;
-            color: #6A6F75;
-            width: 160px;
-            padding: 14px 17px 12px 30px;
-            -webkit-border-radius: 5px 0px 0px 5px;
-            -moz-border-radius: 5px 0px 0px 5px;
-            border-radius: 5px 0px 0px 5px;
-            text-shadow: 0 2px 3px #fff;
-            -webkit-transition: all 0.7s ease 0s;
-            -moz-transition: all 0.7s ease 0s;
-            -o-transition: all 0.7s ease 0s;
-            transition: all 0.7s ease 0s;
-        }
+    #searchbox input[type="text"] {
+      background: url(http://2.bp.blogspot.com/-xpzxYc77ack/VDpdOE5tzMI/AAAAAAAAAeQ/TyXhIfEIUy4/s1600/search-dark.png) no-repeat 10px 13px #f2f2f2;
+      border: 2px solid #f2f2f2;
+      font: bold 12px Arial, Helvetica, Sans-serif;
+      color: #6A6F75;
+      width: 160px;
+      padding: 14px 17px 12px 30px;
+      -webkit-border-radius: 5px 0px 0px 5px;
+      -moz-border-radius: 5px 0px 0px 5px;
+      border-radius: 5px 0px 0px 5px;
+      text-shadow: 0 2px 3px #fff;
+      -webkit-transition: all 0.7s ease 0s;
+      -moz-transition: all 0.7s ease 0s;
+      -o-transition: all 0.7s ease 0s;
+      transition: all 0.7s ease 0s;
+    }
 
-        #searchbox input[type="text"]:focus {
-            background: #f7f7f7;
-            border: 2px solid #f7f7f7;
-            width: 200px;
-            padding-left: 10px;
-        }
+    #searchbox input[type="text"]:focus {
+      background: #f7f7f7;
+      border: 2px solid #f7f7f7;
+      width: 200px;
+      padding-left: 10px;
+    }
 
-        #button-submit {
-            margin-left: -40px;
-            cursor: pointer;
-        }
+    #button-submit {
+      margin-left: -40px;
+      cursor: pointer;
+    }
 
-    </style>
+  </style>
+  <link rel="stylesheet" href="demo.css">
+  <script>
+    $(document).ready(function () {
+      console.log('document');
+      var Hocsinh = {
+        name: "John",
+        printName: function () {
+          console.log('Ktest');
+          console.log(this.name);
+        }
+      };
+      $('button').click(Hocsinh.printName.bind(Hocsinh));
+    });
+  </script>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <body>
-
-<div class="container">
-    <div id="searchbox">
-        <input name="q" type="text" size="15" placeholder="Type here..."/>
-        <i id="button-submit" class="fa fa-times">X</i>
-    </div>
-</div>
+<input type="button" value="Test"/>
 </body>
 </html>

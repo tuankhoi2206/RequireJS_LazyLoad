@@ -6,8 +6,15 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+}
+/**
+ * Desc rem: https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
+ * Most browsers has a default value of 16px
+ * 62.5% of 16px = 10px
+ * 1.4 = 14px
+ **/
+html {
+  font-size: 10px;
 }
 html,
 body {
@@ -17,101 +24,165 @@ body {
 }
 body {
   font-family: 'Roboto', sans-serif;
-  position: relative;
+  font-size: 1.4rem;
   font-weight: 400;
   background-color: rgba(0,0,0,0.02);
-  overflow: hidden;
 }
-#main-container {
-  height: calc(100% - 80px);
-}
-#main-container .main-content {
-  height: 100%;
-}
-#main-container .main-content #center-container {
-  height: 100%;
+.link-custom,
+#header a,
+#header .header-left .header-title .title,
+#header .header-right .languages a img,
+#sidebar a {
+  cursor: pointer;
+  text-decoration: none;
 }
 /*-------------------------------*/
 /*           HEADER              */
 /*-------------------------------*/
 #header a {
-  text-decoration: none;
+  color: #fff;
 }
 #header {
-  background-color: #1a91b1;
+  height: 8rem;
   color: #fff;
-  height: 80px;
 }
-#header #header-wrap {
-  padding-left: 3%;
-  float: left;
+#header .row {
+  background-color: #1a91b1;
 }
-#header-wrap a {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
+#header .header-left .header-title {
+  white-space: nowrap;
+  line-height: 8rem;
+  font-size: 3rem;
+  text-shadow: 1px 2px 3px #808080;
 }
-/**** header ****/
-#header-wrap {
-  font-size: 30px;
-  height: 80px;
-  line-height: 80px;
-}
-#header a {
+#header .header-left .header-title .title {
+  text-shadow: 0.25px 0.25px 0.25px #fff;
   color: #f5f5f5;
 }
-#header-wrap .menubtn {
+#header .header-left .header-title .menu-responsive {
   display: none;
-  cursor: pointer;
   float: none;
+  cursor: pointer;
   border: 1px solid #ddd;
+  border-radius: 3px;
   margin: 0px;
   padding: 7px;
 }
-#header-wrap .menubtn .icon-bar {
+#header .header-left .header-title .menu-responsive .icon-bar {
   background-color: #fff;
 }
-#header .flag {
-  float: right;
-  padding-right: 1%;
+#header .header-right .languages {
+  white-space: nowrap;
 }
-#header .flag a img {
-  height: 25px;
-  cursor: pointer;
+#header .header-right .languages a img {
+  height: 2.5rem;
 }
-/**
- *=================>FOOTER<=================
- **/
-#footer > div {
-  background-color: #1a91b1;
-  height: 80px;
+/*-------------------------------*/
+/*           SECTION             */
+/*-------------------------------*/
+section {
+  height: calc(100% - 16rem);
 }
-#footer {
-  position: fixed;
-  bottom: -1px;
-  left: 0;
-  right: 0;
+section .btn {
+  font-size: 1.4rem;
 }
+section #main-wrapper {
+  height: 100%;
+}
+section #main-wrapper .container {
+  height: inherit;
+}
+section #main-wrapper .container .row {
+  height: inherit;
+}
+section #main-wrapper .container .row #left-sidebar {
+  height: inherit;
+  border-left: 1px solid #dcdcdc;
+}
+section #main-wrapper .container .row #left-sidebar .btn-group-vertical {
+  width: 100%;
+  margin-top: 1rem;
+}
+section #main-wrapper .container .row #main-content {
+  height: inherit;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+}
+section #main-wrapper .container .row #main-content .navbar {
+  border: 0px;
+  background-color: transparent;
+  margin: 0px;
+}
+/*-------------------------------*/
+/*           SIDEBAR              */
+/*-------------------------------*/
+.hover-focus,
+#sidebar a:hover,
+.offcanvas a:focus {
+  color: #1a91b1;
+  font-size: 16px;
+  font-weight: bold;
+}
+#sidebar {
+  height: calc(100% - 16rem);
+  width: 20rem;
+  position: absolute;
+  z-index: 1;
+  background-color: #e9ebee;
+  padding-top: 5px;
+  -webkit-box-shadow: 1px 0px 9px 0px #777;
+  box-shadow: 1px 0px 9px 0px #777;
+}
+#sidebar a {
+  padding: 8px 8px 8px 20px;
+  font-size: 1.5rem;
+  color: #696763;
+  display: block;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.active-menu {
+  background-color: rgba(0,0,0,0.05);
+  border-left: 3px solid #808080;
+  font-weight: bold;
+}
+/*-------------------------------*/
+/*           FOOTER              */
+/*-------------------------------*/
 #footer .company-info p {
-  line-height: 80px;
+  margin-bottom: 0px;
+  line-height: 8rem;
   text-align: center;
   color: #f5f5f5;
+  text-shadow: 0.25px 0.25px 0.25px #fff;
+  font-size: 1.5rem;
 }
-.table > tbody > tr > td {
-  vertical-align: middle;
+#footer div {
+  background-color: #1a91b1;
 }
-/*for song*/
+/*-------------------------------*/
+/*           SONG                */
+/*-------------------------------*/
+#song,
+#playlist {
+  height: calc(100% - 10rem);
+}
+#song.container-fluid,
+#playlist.container-fluid {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
 div.hLeft {
   float: left;
+  font-size: 2rem;
+  font-weight: 600;
 }
 div.hRight {
   float: right;
-  width: 100%;
-}
-.navbar {
-  min-height: 0px;
+  white-space: nowrap;
 }
 .padding-top {
   padding-top: 9px;
@@ -123,24 +194,12 @@ div.hRight {
   display: block;
   overflow: auto;
 }
-.container-fluid {
-  position: relative;
-}
-/**/
-/* all*/
 .my-panel {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
 .panel-footer {
   text-align: right;
-}
-.my-animate {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
 }
 /* search bar*/
 .cs-search-bar {
@@ -152,28 +211,7 @@ div.hRight {
 .blackcolor {
   color: #0f0f0f;
 }
-.flag a,
-.flag img {
-  cursor: pointer;
-}
 /*** BODY ***/
-.main-content {
-  padding: 0px;
-}
-.col-text-align {
-  text-align: center;
-}
-/*.btn-default:not(.nofocus):focus
-    background-color: #e6e6e6
-
-
-.btn-default:not(.noactive):active
-    background-color: #e6e6e6
-*/
-.title {
-  font-size: 18px;
-  font-weight: bold;
-}
 .has-error {
   color: #b22222;
 }
@@ -201,73 +239,58 @@ div.hRight {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-/* Dành cho máy tính bảng chiều ngang */
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  #div-contenter {
-    width: 100%;
-  }
-  #left-div {
-    display: none;
-  }
-  #center-container {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .displayLabel {
-    display: none;
-  }
-  .main-table {
-    display: none;
-  }
-  .panel-list-mini {
-    display: block;
-  }
-}
-/* button in nav */
-@media screen and (max-width: 600px) {
+@media all and (max-width: 480px) {
   .nav-button {
     display: none;
   }
-}
-@media screen and (max-width: 420px) {
   #list-btn-del {
     display: none;
   }
 }
-/* Dành cho điện thoại */
-@media all and (max-width: 480px) {
-  #header-wrap {
-    height: 50px;
-    line-height: 50px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .sidenav {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {
-    height: auto;
-  }
-}
-/******Reponsive*********/
-@media all and (max-width: 900px) {
-  #header-wrap {
-    font-size: 25px;
-  }
-  #header-wrap .menubtn {
+@media all and (max-width: 768px) {
+  #header .header-left .header-title .menu-responsive {
     display: inline-block;
+  }
+  #song,
+  #playlist {
+    height: calc(100% - 6rem);
   }
   .breadcrumb,
   #music-icon,
-  #left-div {
+  #left-sidebar {
     display: none;
   }
-  .sidenavrp a {
-    font-size: 16px;
+}
+@media all and (max-width: 980px) {
+  .container {
+    width: inherit !important;
+  }
+}
+/*
+ *https://web.archive.org/web/20140330054852/http://responsivenews.co.uk/post/13925578846/fluid-grids-orientation-resolution-independence
+ */
+@media (min-width: 858px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 780px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media (min-width: 702px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 724px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 623px) {
+  html {
+    font-size: 8px;
   }
 }

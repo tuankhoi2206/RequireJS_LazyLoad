@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
   <style>
     * {
       /* So 100% means 100% */
       box-sizing: border-box;
     }
+
     html, body {
       /* Make the body to be as tall as browser window */
       height: 100%;
       background-color: whitesmoke;
       border: 1px solid grey;
+      margin: 0px;
     }
 
-    .footer
+    .header
     {
+      height: 80px;
+    }
+    .footer {
       height: 80px;
       background-color: #9acfea;
       border: 1px solid #737373;
@@ -24,8 +29,8 @@
       bottom: 0px;
       width: 100%;
     }
-    .center
-    {
+
+    .center {
       height: calc(100% - 80px);
       border: 1px solid grey;
       background-color: #9acfea;
@@ -33,11 +38,14 @@
   </style>
 </head>
 <body>
-  <div class="center">
-    <h1>This is center</h1>
-  </div>
-  <div class="footer">
-    Copyright@KhoiVu
-  </div>
+<div class="header">
+  This is Header
+</div>
+<div class="center">
+  <h1>This is center</h1>
+</div>
+<div class="footer">
+  Copyright@KhoiVu
+</div>
 </body>
 </html>

@@ -7,8 +7,15 @@
 
 *
   box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
+
+/**
+ * Desc rem: https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
+ * Most browsers has a default value of 16px
+ * 62.5% of 16px = 10px
+ * 1.4 = 14px
+ **/
+html
+  font-size 10px
 
 html, body
   height 100%
@@ -17,93 +24,148 @@ html, body
 
 body
   font-family 'Roboto', sans-serif
-  position relative
+  font-size 1.4rem
   font-weight 400
   background-color rgba(0, 0, 0, 0.02)
-  overflow hidden
 
-#main-container
-  height calc(100% - 80px)
-  .main-content
-    height 100%
-    #center-container
-      height 100%
+.link-custom
+  cursor pointer
+  text-decoration none
 
 /*-------------------------------*/
 /*           HEADER              */
 /*-------------------------------*/
 #header a
-  text-decoration none
+  color white
+  @extend .link-custom
 
 #header
-  background-color #1A91B1
+  height 8rem
   color: white
-  height 80px
+  .row
+    background-color #1A91B1
+  .header-left
+    .header-title
+      white-space nowrap
+      line-height 8rem
+      font-size 3rem
+      text-shadow 1px 2px 3px gray
+      .title
+        text-shadow 0.25px 0.25px 0.25px white
+        color: #f5f5f5
+        @extend .link-custom
+      .menu-responsive
+        display: none
+        float none
+        cursor: pointer
+        border 1px solid #ddd
+        border-radius 3px
+        margin 0px
+        padding 7px
+        .icon-bar
+          background-color white
 
-#header #header-wrap
-  padding-left: 3%
-  float left
+  .header-right
+    .languages
+      white-space nowrap
+      a img
+        height: 2.5rem
+        @extend .link-custom
 
-#header-wrap a
-  transition: all 0.5s
+/*-------------------------------*/
+/*           SECTION             */
+/*-------------------------------*/
+section
+  height calc(100% - 16rem)
+  .btn
+    font-size 1.4rem
+  #main-wrapper
+    height 100%
+    .container
+      height inherit
+      .row
+        height inherit
+        #left-sidebar
+          height inherit
+          border-left 1px solid #dcdcdc
+          .btn-group-vertical
+            width 100%
+            margin-top 1rem
+        #main-content
+          height inherit
+          border-left 1px solid #dcdcdc
+          border-right 1px solid #dcdcdc
+          .navbar
+            border 0px
+            background-color transparent
+            margin 0px
 
-/**** header ****/
-#header-wrap
-  font-size: 30px
-  height: 80px
-  line-height: 80px
+/*-------------------------------*/
+/*           SIDEBAR              */
+/*-------------------------------*/
+.hover-focus
+  color #1A91B1
+  font-size 16px
+  font-weight bold
 
-#header a
-  color: #f5f5f5
+#sidebar
+  height calc(100% - 16rem)
+  width 20rem
+  position absolute
+  z-index 1
+  background-color #e9ebee
+  padding-top 5px
+  box-shadow 1px 0px 9px 0px #777
+  a
+    padding 8px 8px 8px 20px
+    font-size 1.5rem
+    color #696763
+    display block
+    transition 0.3s
+    @extend .link-custom
+    &:hover
+      @extend .hover-focus
 
-#header-wrap .menubtn
-  display: none
-  cursor: pointer
-  float none
-  border 1px solid #ddd
-  margin 0px
-  padding 7px
-  .icon-bar
-    background-color white
+.offcanvas a:focus
+  @extends .hover-focus
 
-#header .flag
-  float right
-  padding-right 1%
+.active-menu
+  background-color rgba(0, 0, 0, .05)
+  border-left 3px solid gray
+  font-weight bold
 
-#header .flag a img
-  height: 25px
-  cursor pointer
-
-/**
- *=================>FOOTER<=================
- **/
-#footer > div
-  background-color #1A91B1 //#3498db
-  height 80px
-
+/*-------------------------------*/
+/*           FOOTER              */
+/*-------------------------------*/
 #footer
-  position fixed
-  bottom -1px
-  left 0
-  right 0
   .company-info p
-    line-height 80px
+    margin-bottom 0px
+    line-height 8rem
     text-align center
     color #f5f5f5
+    text-shadow 0.25px 0.25px 0.25px white
+    font-size: 1.5rem
+  div
+    background-color #1A91B1
 
-.table > tbody > tr > td
-  vertical-align: middle
+/*-------------------------------*/
+/*           SONG                */
+/*-------------------------------*/
+#song, #playlist
+  height calc(100% - 10rem)
 
-/*for song*/
+#song.container-fluid, #playlist.container-fluid
+  padding-right 1.5rem !important
+  padding-left 1.5rem !important
+
 div.hLeft
-  float: left
+  float left
+  font-size 2rem
+  font-weight 600
 
 div.hRight
-  float: right
-  width 100%
-
-.navbar
-  min-height: 0px
+  float right
+  white-space nowrap
 
 .padding-top
   padding-top: 9px
@@ -115,21 +177,12 @@ div.hRight
   display: block
   overflow: auto
 
-.container-fluid
-  position relative
-
-/**/
-/* all*/
-
 .my-panel
   border-top-left-radius: 0px
   border-top-right-radius: 0px
 
 .panel-footer
   text-align: right
-
-.my-animate
-  transition: all 0.5s
 
 /* search bar*/
 .cs-search-bar
@@ -141,26 +194,7 @@ div.hRight
 .blackcolor
   color #0f0f0f
 
-.flag a, .flag img
-  cursor pointer
-
 /*** BODY ***/
-.main-content
-  padding: 0px
-
-.col-text-align
-  text-align: center
-
-/*.btn-default:not(.nofocus):focus
-    background-color: #e6e6e6
-
-
-.btn-default:not(.noactive):active
-    background-color: #e6e6e6
-*/
-.title
-  font-size: 18px
-  font-weight bold
 
 .has-error
   color: #b22222
@@ -188,76 +222,51 @@ div.hRight
   overflow: hidden
   text-overflow: ellipsis
 
-/* Dành cho máy tính bảng chiều ngang */
-@media all and (min-width: 768px) and (max-width: 1024px)
-  #div-contenter
-    width: 100%
-
-  #left-div
-    display none
-
-  #center-container
-    width: 100%
-
-@media screen and (max-width: 650px)
-  .displayLabel
-    display: none
-
-  .main-table
-    display: none
-
-  .panel-list-mini
-    display: block
-
-/* button in nav */
-@media screen and (max-width: 600px)
+@media all and (max-width: 480px)
   .nav-button
     display: none
 
-@media screen and (max-width: 420px)
   #list-btn-del
     display: none
 
-/* Dành cho điện thoại */
-@media all and (max-width: 480px)
-//#header-wrap,
-//footer
-//  height: 50px
-//  line-height: 50px
-//  transition: all 0.5s
-  #header-wrap
-    height: 50px
-    line-height: 50px
-    transition: all 0.5s
+@media all and (max-width: 768px)
+  #header
+    .header-left
+      .header-title
+        .menu-responsive
+          display inline-block
 
-  .sidenav
-    height: auto
-    padding: 15px
-
-  .row.content
-    height: auto
-
-/******Reponsive*********/
-//
-//@media screen and (max-width: 1024px)
-//  #center-container
-//    width: 100%
-
-@media all and (max-width: 900px)
-
-  #header-wrap
-    font-size: 25px
-
-  #header-wrap .menubtn
-    display: inline-block
+  #song, #playlist
+    height calc(100% - 6rem)
 
   .breadcrumb,
   #music-icon,
-  #left-div
+  #left-sidebar
     display: none
 
-  .sidenavrp a
-    font-size: 16px;
+@media all and (max-width: 980px)
+  .container
+    width inherit !important
 
+/*
+ *https://web.archive.org/web/20140330054852/http://responsivenews.co.uk/post/13925578846/fluid-grids-orientation-resolution-independence
+ */
+@media (min-width: 858px)
+  html
+    font-size 12px
 
+@media (min-width: 780px)
+  html
+    font-size 11px
 
+@media (min-width: 702px)
+  html
+    font-size 10px
+
+@media (min-width: 724px)
+  html
+    font-size 9px
+
+@media (max-width: 623px)
+  html
+    font-size 8px

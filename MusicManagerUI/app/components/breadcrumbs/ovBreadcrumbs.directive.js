@@ -1,6 +1,9 @@
 (function () {
   'use strict';
-  var breadcrumbs = function () {
+
+  angular.module('songApp').directive('ovBreadcrumbs', breadcrumbs);
+
+  function breadcrumbs() {
     return {
       restrict: 'E',
       templateUrl: 'components/breadcrumbs/ovBreadcrumbsDirective.html',
@@ -12,5 +15,5 @@
       bindToController: true
     };
   };
-  angular.module('songApp').directive('ovBreadcrumbs', breadcrumbs);
+
 })();

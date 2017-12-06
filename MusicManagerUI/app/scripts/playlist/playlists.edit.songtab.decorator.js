@@ -58,7 +58,7 @@
         }
 
         function updatePlaylist() {
-          commonService.putData('api/playlist', injectedVm.cache.common.playlistModel).then(function () {
+          commonService.putData(commonConstant.API.PLAYLIST, injectedVm.cache.common.playlistModel).then(function () {
             PlayListFactory.function.switchShowMode();
           }, function (error) {
             console.log('error ', error);

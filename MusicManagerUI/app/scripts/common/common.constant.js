@@ -1,10 +1,10 @@
 angular.module('songApp')
   .constant('commonConstant', {
-
     /*** Mode display of page ***/
     MENU_MODE: {
       SONG: 'SONG',
-      PLAYLIST: 'PLAYLIST'
+      PLAYLIST: 'PLAYLIST',
+      DEMO: 'DEMO'
     },
     /*** Mode display of page ***/
     VIEW_MODE: {

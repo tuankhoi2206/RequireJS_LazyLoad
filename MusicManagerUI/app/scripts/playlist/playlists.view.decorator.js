@@ -35,10 +35,15 @@
             }
           };
 
+          initConfigPlaylistTable();
+
+        }
+
+        function initConfigPlaylistTable() {
           injectedVm.configDataPlaylistTable = {
             items: [],
             titleColumns: [],
-            rowData:[],
+            rowData: [],
             isCheckedHeaderChkbox: injectedVm.showPlaylistView.isCheckedHeaderChkbox,
             disableCheckedAll: injectedVm.showPlaylistView.isDisabledDeleteBtn,
             listCheckedChkBox: injectedVm.cache.showPlaylistView.listCheckedChkBox,
@@ -55,16 +60,16 @@
           injectedVm.mainObject = injectedVm.configDataPlaylistTable;
           injectedVm.mainObject.titleColumns.push(
             {//Cols 1
-              mapdata: 'id', colname: 'app.table.playlist.id', width: '8%'
+              mapdata: 'id', colname: 'app.table.playlist.id', width: '50px'
             },
             {//Cols 2
-              mapdata: 'name', colname: 'app.table.playlist.name', width: '30%'
+              mapdata: 'name', colname: 'app.table.playlist.name', width: '280px'
             },
             {//Cols 3
-              mapdata: 'description', colname: 'app.table.playlist.description', width: '30%'
+              mapdata: 'description', colname: 'app.table.playlist.description', width: '270px'
             },
             {//Cols 3
-              mapdata: '', colname: 'app.table.playlist.action', width: '24%'
+              mapdata: '', colname: 'app.table.playlist.action', width: '200px'
             }
           );
 
@@ -75,37 +80,6 @@
             {mapdata: '', templateUrl: 'scripts/playlist/template/action-column.html'} // lỗi trong table view
             // {mapdata: '', templateUrl: ''}
           );
-
-          // injectedVm.configDataPlaylistTable.titleColumns = [
-          //   {//Cols 1
-          //     mapdata: '',
-          //     colname: '',
-          //     width: 0,
-          //     //styles: {},// style css or .class
-          //     // templateUrl: '<div class="" ng-model="item">{{item.name}}</div>' || '<input type="checkbox" class="checkbox-inline" ng-model="item.isChecked" ng-change="vm.stageChangeChkBox(item.id)">'
-          //     templateUrl: '<input type="checkbox" class="checkbox-inline" ng-model="item.isChecked" ng-change="vm.stageChangeChkBox(item.id)">'
-          //   },
-          //   {//Cols 1
-          //     mapdata: 'id',
-          //     colname: 'ID',
-          //     templateUrl: '<div class="" ng-model="item">{{item.colname}}</div>'
-          //   },
-          //   {//Cols 2
-          //     mapdata: 'name',
-          //     colname: 'Name',
-          //     templateUrl: '<div class="" ng-model="item">{{item.colname}}</div>'
-          //   },
-          //   {//Cols 3
-          //     mapdata: 'description',
-          //     colname: 'Description',
-          //     templateUrl: '<div class="" ng-model="item">{{item.colname}}</div>'
-          //   },
-          //   {//Cols 3
-          //     mapdata: 'action',
-          //     colname: '',
-          //     templateUrl: '<div class="" ng-model="item">{{item.colname}}</div>'
-          //   }
-          // ];
         }
 
         function switchAddMode() {

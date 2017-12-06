@@ -21,7 +21,7 @@
 
   var app = angular
     .module('songApp')
-    .config(['$routeProvider',  '$i18nextProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider',
+    .config(['$routeProvider', '$i18nextProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider',
       function ($routeProvider, $i18nextProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider) {
         // .config(['$routeProvider', '$i18nextProvider', '$controllerProvider', '$ocLazyLoadProvider',
         //   function ($routeProvider, $i18nextProvider, $controllerProvider, $ocLazyLoadProvider) {
@@ -30,8 +30,8 @@
          * configure the ocLazyLoader to use requireJS as the loader
          */
         $ocLazyLoadProvider.config({
-          debug: true,
-          events: true
+          // debug: true,
+          // events: true
           // ,
           // asyncLoader: require
         });
@@ -95,12 +95,25 @@
                 });
               }]
             }
-          })
-          .otherwise({
+          }).when('/demoDirective', {
+            templateUrl: 'scripts/demo/demo-theme.html',
+            controller: 'DemoCtrl',
+            controllerAs: 'vm',
+            resolve: {
+              lazy: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                  // load multiple file for template
+                  files: [
+                    'scripts/demo/demo.controller.js'
+                  ]
+                });
+              }]
+            }
+          }).otherwise({
             redirectTo: '/songs'
           });
       }]).run(function ($rootScope) {
-        console.log('rootScope');
+      console.log('rootScope');
 
     });
   return app;

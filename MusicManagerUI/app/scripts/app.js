@@ -18,7 +18,6 @@
           vm.changeShowSideBar = changeShowSideBar;
           setCurrentMenu($location.path());
 
-
         }
 
         init();
@@ -26,8 +25,10 @@
         function setCurrentMenu(path) {
           if ('/songs' === path || '/' === path) {
             cacheMenu.currentMenu.name = commonConstant.MENU_MODE.SONG;
-          } else {
+          } else if ('playlists' === path) {
             cacheMenu.currentMenu.name = commonConstant.MENU_MODE.PLAYLIST;
+          } else if ('demoDirective' === path) {
+
           }
         }
 
@@ -39,9 +40,9 @@
             $scope.titleName = 'Songs';
             cacheMenu.currentMenu.name = commonConstant.MENU_MODE.SONG;
           }
-          else {
-            $scope.titleName = 'Playlists';
-            cacheMenu.currentMenu.name = commonConstant.MENU_MODE.PLAYLIST;
+          else if ('demoDirective' === path) {
+            $scope.titleName = 'Demo Directive';
+            cacheMenu.currentMenu.name = commonConstant.MENU_MODE.DEMO;
           }
         }
 

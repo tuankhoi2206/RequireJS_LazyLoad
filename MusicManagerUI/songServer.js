@@ -3,62 +3,100 @@
   /** DATABASE ====================== */
 
   var songDb, listDb, songListRelative;
-  songDb = [
-	{
-        id: '1',
-        title: 'Radioactive 1',
-        artists: 'Imagine Dragon'
-      },
-      {
-        id: '2',
-        title: 'Shape of You',
-        artists: 'Ed Sheeran'
-      }
-      ,
-      {
-        id: '3',
-        title: 'Something Just Like This',
-        artists: 'The Chainsmokers & Coldplay'
-      }
-      ,
-      {
-        id: '4',
-        title: 'The Weeknd',
-        artists: 'Starboy ft.Daft Punk'
-      },
-      {
-        id: '5',
-        title: 'Chained To The Rhythm',
-        artists: 'Katy Perry'
-      },
-      {
-        id: '6',
-        title: 'Chained To The Rhythm',
-        artists: 'Katy Perry'
-      },
-      {
-        id: '7',
-        title: 'Chained To The Rhythm',
-        artists: 'Katy Perry'
-      },
-      {
-        id: '8',
-        title: 'Chained To The Rhythm',
-        artists: 'Katy Perry'
-      },
-      {
-        id: '9',
-        title: 'Chained To The Rhythm',
-        artists: 'Katy Perry'
-      }
-  ];
+  songDb =[
+  {
+    "id": "1",
+    "title": "Radioactive",
+    "artists": "Imagine Dragon"
+  },
+  {
+    "id": "2",
+    "title": "Shape of You",
+    "artists": "Ed Sheeran"
+  },
+  {
+    "id": "3",
+    "title": "Something Just Like This",
+    "artists": "The Chainsmokers & Coldplay"
+  },
+  {
+    "id": "4",
+    "title": "The Weeknd",
+    "artists": "Starboy ft.Daft Punk"
+  },
+  {
+    "id": "5",
+    "title": "Chained To The Rhythm",
+    "artists": "Katy Perry"
+  },
+  {
+    "id": "6",
+    "title": "Despacito",
+    "artists": "Luis Fonsi & Daddy Yankee Featuring Justin Bieber"
+  },
+  {
+    "id": "7",
+    "title": "I am The One",
+    "artists": "DJ Khaled Featuring Justin Bieber, Quavo, Chance The Rapper & Lil Wayne"
+  },
+  {
+    "id": "8",
+    "title": "Wild Thoughts",
+    "artists": "DJ Khaled Featuring Rihanna & Bryson Tiller"
+  },
+  {
+    "id": "9",
+    "title": "Shape Of You",
+    "artists": "Ed Sheeran"
+  },
+  {
+    "id": "10",
+    "title": "Humble.",
+    "artists": "Kendrick Lamar"
+  },
+  {
+    "id": "11",
+    "title": "Congratulations",
+    "artists": "Post Malone Featuring Quavo"
+  },
+  {
+    "id": "12",
+    "title": "Body Like A Back Road",
+    "artists": "Sam Hunt"
+  },
+  {
+    "id": "13",
+    "title": "Melodrama",
+    "artists": "Lorde"
+  },
+  {
+    "id": "14",
+    "title": "Pretty Girls Like Trap Music",
+    "artists": "2 Chainz"
+  },
+  {
+    "id": "15",
+    "title": "DAMN.",
+    "artists": "Kendrick Lamar"
+  },
+  {
+    "id": "16",
+    "title": "DAMN.",
+    "artists": "Kendrick Lamar"
+  },
+  {
+    "id": "17",
+    "title": "The Nashville Sound",
+    "artists": "Jason Isbell And The 400 Unit"
+  }
+];
 
   listDb = [
   {
     id: 1,
-    name: 'PlayList 2011',
+    name: 'Billboard hot 100',
     description: 'Imagine Dragon',
-    songs: ["1","2"]
+    songs: ["1","2","3"]
   }
   
   ];
