@@ -8,7 +8,7 @@
 
   function SteppersCtrl() {
     var vm = this;
-    vm.titles = vm.config.titles || defaultConfig.titles;
+    // vm.titles = vm.config.titles || defaultConfig.titles;
   }
 
 })();

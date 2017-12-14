@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Position</title>
+  <style>
+    .wapper-container {
+      padding: 30px;
+      background-color: #3c3c3c;
+    }
+
+    .t-parent {
+      position: relative;
+      background-color: #1a91b1;
+      height: 400px;
+      width: 500px;
+      top: 100px;
+    }
+
+    .t-child {
+      position: absolute;
+      background-color: #1b6d85;
+      height: 200px;
+      width: 200px;
+      left: 300px;
+    }
+
+    .t-normal {
+      background-color: #5c5c5c;
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wapper-container">
+  <div class="t-parent">
+    <div class="t-child"></div>
+    <div class="t-normal"></div>
+  </div>
+</div>
+</body>
+</html>

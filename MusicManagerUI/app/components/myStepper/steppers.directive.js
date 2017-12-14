@@ -4,7 +4,10 @@
 
   function myStepper() {
     return {
-      restrict: 'A',
+      restrict: 'EA',
+      scope: {
+        config: '='
+      },
       template: 'components/myStepper/template/steppers.template.html',
       controller: 'SteppersCtrl',
       controllerAs: 'vm',

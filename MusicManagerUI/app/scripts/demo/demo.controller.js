@@ -5,8 +5,15 @@
 
   DemoCtrl.$inject = ['$scope'];
 
-  function DemoCtrl() {
+  function DemoCtrl($scope) {
+    var vm = this;
 
+    initCtrl();
+
+    function initCtrl() {
+      vm.initViewObj = {};
+      
+    }
   }
 
 })();
