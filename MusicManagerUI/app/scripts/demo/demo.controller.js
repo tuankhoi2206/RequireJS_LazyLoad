@@ -12,7 +12,12 @@
 
     function initCtrl() {
       vm.initViewObj = {};
-      
+      vm.initViewObj.configStepper = [
+        {
+          title: "1",
+          templateUrl: ""
+        },
+      ];
     }
   }
 

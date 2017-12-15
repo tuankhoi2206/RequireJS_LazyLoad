@@ -8,7 +8,7 @@
       scope: {
         config: '='
       },
-      template: 'components/myStepper/template/steppers.template.html',
+      templateUrl: 'components/myStepper/template/steppers.template.html',
       controller: 'SteppersCtrl',
       controllerAs: 'vm',
       bindToController: true
