@@ -1,0 +1,64 @@
+<style>
+  .wrapper-login{
+    margin: 15rem auto;
+    width: 40rem;
+    background-color: #f1f1f1;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px;
+  }
+  .login-form {
+    padding: 5rem 0rem 5rem 0rem;
+  }
+
+  .img-height{
+    height: 6rem;
+    cursor: pointer;
+  }
+
+input[type="text"], input[type="button"], input[type="password"] {
+    padding: 1rem;
+    width: 30rem;
+}
+
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    border: 0px;
+}
+
+.login-row{
+  padding-bottom: 1rem;
+}
+
+.login-social{
+  border-bottom: 2px solid white;
+  margin-bottom: 1rem;
+}
+
+</style>
+
+<div class="wrapper-login">
+    <div class="login-form">
+      <div class="login-social">
+          <div>
+            <span><strong>Login</strong> via</span>
+          </div>  
+          <div>
+            <img class="img-height" src="images/login/facebookLoginBtn.png">
+          </div>
+          <div class="login-row">
+            <img class="img-height" src="images/login/twitterLoginBtn.png">
+          </div>   
+      </div>  
+      
+      <div class="login-row">
+        <input type="text" id="username" placeholder="Username">
+      </div>
+      <div class="login-row">
+        <input type="password" id="password" placeholder="Password">
+      </div>
+      <div class="login-row">
+        <input type="button" value="LOGIN">
+      </div>
+    </div>
+</div>

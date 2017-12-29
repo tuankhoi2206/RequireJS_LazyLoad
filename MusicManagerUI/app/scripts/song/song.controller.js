@@ -81,17 +81,17 @@
       }
     };
 
-    $scope.$watch(function () {
-        vm.configDataSongTable.items.length > 1;
-      },
-      function () {
-        $scope.safeApply(function () {
-          console.log('vm.configDataSongTable.items', vm.configDataSongTable.items[0]);
-          document.getElementById('show-selected').innerHTML = 'test';
-          alert('Now');
-          // !scope.$digest();
-        });
-      });
+    // $scope.$watch(function () {
+    //     vm.configDataSongTable.items.length > 1;
+    //   },
+    //   function () {
+    //     $scope.safeApply(function () {
+    //       console.log('vm.configDataSongTable.items', vm.configDataSongTable.items[0]);
+    //       document.getElementById('show-selected').innerHTML = 'test';
+    //       alert('Now');
+    //       // !scope.$digest();
+    //     });
+    //   });
 
     function initCongigSongTable() {
       // vm.configSongTable = {

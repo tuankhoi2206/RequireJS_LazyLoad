@@ -33,7 +33,7 @@
       <!--1. song-->
       <div class="last-col" ng-repeat="format in vm.configData.rowData"
            style="width: {{vm.configData.titleColumns[$index].width}}">
-        <span ng-if="format.mapdata !==''"> {{item[format.mapdata]}}</span>
+        <span ng-if="format.mapdata !==''"> {{item[format.mapdata] || upperCase}}</span>
         <div ng-if="format.templateUrl !==''" ng-include="format.templateUrl"/>
       </div>
     </div>

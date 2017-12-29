@@ -56,24 +56,38 @@
 
         $routeProvider
           .when('/', {
-            redirectTo: '/songs'
+            // redirectTo: '/songs'
+            redirectTo: '/login'
           })//song
-          .when('/songs', {
-            templateUrl: 'scripts/song/songs.html',
-            controller: 'SongCtrl',
+          .when('/login', {
+            templateUrl: 'scripts/login/login.template.html',
+            controller: 'LoginCtrl',
             controllerAs: 'vm',
             resolve: {
               lazy: ['$ocLazyLoad', function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
-                  // load multiple file for template
                   files: [
-                    'scripts/song/song.controller.js',
-                    'scripts/song/song.service.js'
+                    'scripts/login/login.controller.js'
                   ]
                 });
               }]
             }
-          })
+          }).when('/songs', {
+          templateUrl: 'scripts/song/songs.html',
+          controller: 'SongCtrl',
+          controllerAs: 'vm',
+          resolve: {
+            lazy: ['$ocLazyLoad', function ($ocLazyLoad) {
+              return $ocLazyLoad.load({
+                // load multiple file for template
+                files: [
+                  'scripts/song/song.controller.js',
+                  'scripts/song/song.service.js'
+                ]
+              });
+            }]
+          }
+        })
           .when('/playlists', {
             templateUrl: 'scripts/playlist/playlists.html',
             controller: 'PlaylistCtrl',
@@ -96,22 +110,22 @@
               }]
             }
           }).when('/demoDirective', {
-            templateUrl: 'scripts/demo/demo-theme.html',
-            controller: 'DemoCtrl',
-            controllerAs: 'vm',
-            resolve: {
-              lazy: ['$ocLazyLoad', function ($ocLazyLoad) {
-                return $ocLazyLoad.load({
-                  // load multiple file for template
-                  files: [
-                    'scripts/demo/demo.controller.js'
-                  ]
-                });
-              }]
-            }
-          }).otherwise({
-            redirectTo: '/songs'
-          });
+          templateUrl: 'scripts/demo/demo-theme.html',
+          controller: 'LoginCtrl',
+          controllerAs: 'vm',
+          resolve: {
+            lazy: ['$ocLazyLoad', function ($ocLazyLoad) {
+              return $ocLazyLoad.load({
+                // load multiple file for template
+                files: [
+                  'scripts/demo/demo.controller.js'
+                ]
+              });
+            }]
+          }
+        }).otherwise({
+          redirectTo: '/songs'
+        });
       }]).run(function ($rootScope) {
       console.log('rootScope');
 
