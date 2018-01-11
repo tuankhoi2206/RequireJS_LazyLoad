@@ -1,0 +1,29 @@
+.tableview {
+  background-color: #dcdcdc;
+  border: 1px solid #696969;
+  height: 400px;
+  width: 300px;
+}
+.tableview .place-header {
+  background-color: #5bbcec;
+}
+.header {
+  white-space: nowrap;
+}
+.place-header {
+  height: 30px;
+}
+.container-record {
+  height: 150px;
+  width: 300px;
+  overflow: scroll;
+}
+.record-1 {
+  white-space: nowrap;
+}
+.record-1 > div {
+  width: 80px;
+  height: 30px;
+  display: inline;
+  border: 1px solid #fff;
+}
